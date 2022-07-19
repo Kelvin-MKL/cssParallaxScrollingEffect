@@ -1,0 +1,59 @@
+*,*::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+section {
+
+    font-size: 1.5rem;
+    padding: 5rem;
+    color: whitesmoke;
+    background-color: grey;
+
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+.title {
+    color: white;
+    font-size: 5rem;
+    text-shadow: 0 0 10px black;
+   
+}
+
+.inner-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background{
+
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: translateZ(-9px) scale(2);
+    
+}
+
+.foreground{
+    top: -200px;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    transform: translateZ(-9px) scale(1.5);
+    
+}
